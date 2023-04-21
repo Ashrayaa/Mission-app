@@ -32,7 +32,7 @@ const EnvironmentStatement = (props: Props) => {
             </div>
 
             {/*2 Cloud computing  */}
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-6 mt-6 lg:mt-0">
               <div className="flex flex-col gap-4">
                 <h2 className="text-2xl font-bold">CLOUD COMPUTING</h2>
                 <p className="text-[#b6b6b6]">
@@ -49,7 +49,7 @@ const EnvironmentStatement = (props: Props) => {
 
               <Image src={Framethree} alt={"Framethree"} />
             </div>
-            <div className="flex flex-col gap-4 lg:mt-[470px] xl:mt-[410px] 2xl:mt-[400px]">
+            <div className="flex flex-col gap-4 mt-6 lg:mt-[470px] xl:mt-[410px] 2xl:mt-[400px]">
             <h2 className="text-2xl font-bold">NODES ARMY</h2>
             <p className="text-[#b6b6b6]">
               We regularly review cloud computing platforms to ensure you can

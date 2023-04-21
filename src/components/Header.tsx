@@ -3,6 +3,7 @@ import Logo from "public/logo.svg";
 import Link from "next/link";
 import React from "react";
 import { useState } from "react";
+import Banner from "./Banner";
 type Props = {};
 
 function MobileNav({
@@ -15,69 +16,39 @@ function MobileNav({
   const [isVisible, setIsVisible] = useState(false);
   return (
     <div
-      className={`absolute top-0 left-0 w-screen bg-black px-4 pb-8 z-20 transform ${
-        open ? "translate-y-20 sm:translate-y-28" : "-translate-y-full"
-      } transition-transform duration-500 ease-in-out filter`}
+      className={`absolute h-full top-0 left-0 w-screen bg-[#0E0E0E] pb-8 z-20 transform ${
+        open ? "translate-y-5 sm:translate-y-28" : "-translate-y-full"
+      } transition-transform duration-500 ease-in-out filter flex flex-col justify-between `}
     >
-      <div className=" flex lg:hidden flex-col gap-6 pl-8 antialiased bg-[#161618] rounded-3xl py-8 justify-center mt-10">
-        <ul className="flex flex-col gap-3 justify-center">
-          <div className="relative group">
-            <div className="flex gap-2">
-              <button className="hover:text-[#aa4875]">Products</button>
-              {isVisible ? (
-                <button
-                  className="cursor-pointer text-sm font-medium text-green-600"
-                  onClick={() => {
-                    setIsVisible(false);
-                  }}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    className="w-4 h-4"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4.5 15.75l7.5-7.5 7.5 7.5"
-                    />
-                  </svg>
-                </button>
-              ) : (
-                <button
-                  className="cursor-pointer text-sm font-medium text-orange-600"
-                  onClick={() => {
-                    setIsVisible(true);
-                  }}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.5"
-                    stroke="currentColor"
-                    className="w-4 h-4"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                    />
-                  </svg>
-                </button>
-              )}
-            </div>
-            {isVisible && (
-              <div className="absolute top-0 lg:-left-48 transition group-hover:translate-y-8 translate-y-0 opacity-0 invisible group-hover:visible duration-500 ease-in-out group-hover:opacity-100 group-hover:transform z-50 lg:min-w-[760px] transform">
-                {/* <Menu /> */}
-              </div>
-            )}
+      <div className="px-5 lg:hidden antialiased bg-[#0E0E0E] mt-10">
+        <ul className="flex flex-col gap-3 mt-52">
+          <button className=" font-2xl text-bold text-left">
+            <Link href="/genesisPass"> GENESIS PASS</Link>
+          </button>
+          <button className=" font-2xl font-bold text-left">
+            <Link href="/services">SERVICES</Link>
+          </button>
+          <button className=" font-2xl font-bold text-left">
+            <Link href="/projects">PROJECTS</Link>{" "}
+          </button>
+          <button className=" font-2xl font-bold text-left">
+            <Link href="/nft">NFT</Link>{" "}
+          </button>
+          <button className=" font-2xl font-bold text-left">
+            <Link href="/faq">FAQ</Link>{" "}
+          </button>
+          <div className="flex justify-between">
+            <button className="text-[#767676] text-left font-2xl text-bold">
+              PRATFORM{" "}
+            </button>
+            <p className="text-[#767676] text-left font-2xl text-bold">
+              COMING SOON
+            </p>{" "}
           </div>
         </ul>
       </div>
+
+      <Banner />
     </div>
   );
 }
@@ -88,7 +59,7 @@ const Header = (props: Props) => {
     <div className="flex flex-col pt-4 lg:pt-0 lg:flex-row lg:justify-between lg:items-center">
       {/* LOGO */}
       <div className="flex justify-between items-center align-middle px-4">
-        <div className="flex gap-2 justify-center items-center">
+        <div className="flex gap-2 z-40 justify-center items-center">
           <Link href="/">
             <Image src={Logo} alt="logo" width="35" className="" />
           </Link>

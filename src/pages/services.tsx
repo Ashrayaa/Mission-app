@@ -1,3 +1,5 @@
+import Head from 'next/head'
+import Header from '@/components/Header'
 import Image from "next/image";
 import React from "react";
 import Conodes from "public/conodes.svg";
@@ -8,11 +10,24 @@ import Nodebuildtemplates from "public/template.svg";
 import Blockchain from "public/blockchain.svg";
 import Frameone from "public/frame1.svg";
 import Frametwo from "public/frame2.svg";
-type Props = {};
 
-const Services = (props: Props) => {
+type Props = {}
+
+const services = (props: Props) => {
   return (
-    <div>
+    <>
+    <Head>
+      <title>We&apos;re on a Mission</title>
+      <meta
+        name="description"
+        content="Notification infrastructure platform for developers"
+      />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="icon" href="/logo.svg" />
+    </Head>
+    <div className="bg-[#0E0E0E] text-white antialiased h-full">
+      <Header/>
+      <div>
       <div className="p-6 xl:px-52 lg:mx-12 lg:mt-16">
         <h1 className="text-5xl lg:text-7xl font-extrabold my-6 lg:my-12">
           SERVICES
@@ -105,7 +120,8 @@ const Services = (props: Props) => {
         </div>
       </div>
     </div>
-  );
-};
+    </div>
+  </>  )
+}
 
-export default Services;
+export default services

@@ -15,9 +15,9 @@ const Section = ({
   setIsVisible,
 }: FAQparameters) => {
   return (
-    <div className="flex flex-col gap-3 justify-center mx-2 xl:mx-48 2xl:mx-64 rounded-xl py-2">
+    <div className="flex flex-col gap-3 justify-center mx-2 xl:mx-48 2xl:mx-64 py-2">
       <div className="flex justify-between gap-8">
-        <h2 className=" md:text-left xl:text-lg xl:leading-9">{question}</h2>
+        <h2 className=" xl:text-lg ">{question}</h2>
         {isVisible ? (
           <button
             onClick={() => {
@@ -68,7 +68,7 @@ const Section = ({
           isVisible ? "max-h-[300px]" : ""
         } overflow-hidden transition-all duration-700`}
       >
-        <p className="text-[#b6b6b6] text-sm md:text-left xl:text-lg ">
+        <p className="text-[#b6b6b6] text-sm xl:text-lg ">
           {answer}
         </p>
       </div>
@@ -82,7 +82,7 @@ const FAQ = () => {
   return (
     <section className="text-white p-5">
       <div className="flex flex-col gap-6 justify-center items-center">
-        <h1 className="text-5xl font-extrabold my-6">FREQUENTLY ASKED</h1>
+        <h1 className="text-5xl font-extrabold my-6 text-left">FREQUENTLY ASKED</h1>
         <div className="flex flex-col gap-3">
           <Section
             question={"WHAT IS NODE ARMY?"}
