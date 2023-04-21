@@ -12,7 +12,6 @@ const Banner = (props: Props) => {
       <span className="text-[#0E0E0E] hidden lg:flex font-bold text-xl">WE&apos;RE ON A MISSION</span>
       <span className="text-[#0E0E0E] hidden lg:flex font-bold text-xl">WE&apos;RE ON A MISSION</span>
       <span className="text-[#0E0E0E] hidden lg:flex font-bold text-xl">WE&apos;RE ON A MISSION</span>
-      <span className="text-[#0E0E0E] hidden lg:flex font-bold text-xl">WE&apos;RE ON A MISSION</span>
     </div>
   </div>
   );
