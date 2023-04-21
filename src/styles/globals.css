@@ -38,15 +38,17 @@ body {
 
 }
 
+.banner-container .sliding-text {
+  animation: slide 8s linear infinite ;
+  overflow:hidden;
+}
+
 @keyframes slide {
   0% {
-    transform: translateX(100%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: translateX(800%);
+    transform: translateX(100%);
   }
 }
 
-.animate-slide {
-  animation: slide 5s linear infinite;
-}

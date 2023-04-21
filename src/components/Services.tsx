@@ -44,7 +44,7 @@ const Services = (props: Props) => {
             </div>
 
             <div className="flex flex-col gap-2">
-              <Image src={Frameone} alt={"Frameone"} />
+              <Image src={Frameone} alt={"Frameone"} loading="lazy"/>
 
               {/* 3 */}
               <div className="flex flex-col gap-4 mt-6 lg:mt-0">
