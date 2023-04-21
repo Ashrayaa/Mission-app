@@ -68,7 +68,7 @@ const Section = ({
           isVisible ? "max-h-[300px]" : ""
         } overflow-hidden transition-all duration-700`}
       >
-        <p className="text-[#C0C0C8] text-sm md:text-left xl:text-lg xl:leading-9">
+        <p className="text-[#b6b6b6] text-sm md:text-left xl:text-lg ">
           {answer}
         </p>
       </div>

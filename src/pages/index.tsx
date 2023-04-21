@@ -5,6 +5,7 @@ import Head from 'next/head'
 import Services from '@/components/Services'
 import EnvironmentStatement from '@/components/EnvironmentStatement'
 import FAQ from '@/components/FAQ'
+import Banner from '@/components/Banner'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,6 +24,7 @@ export default function Home() {
       <main className="bg-[#0E0E0E] text-white sm:pt-8 antialiased h-full">
         <Header/>
         <Services/>
+        <Banner/>
         <EnvironmentStatement/>
         <FAQ/>
       

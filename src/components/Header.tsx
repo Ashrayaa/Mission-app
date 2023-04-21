@@ -85,14 +85,15 @@ const Header = (props: Props) => {
   const [open, setOpen] = useState(false); //initial stage is false because the button is not open
 
   return (
-    <div className="flex flex-col lg:flex-row p-4 lg:justify-between lg:items-center text-white border-none sm:mx-8 lg:p-2.5 lg:mx-10 xl:mx-48 2xl:mx-[260px] xl:px-6 rounded-full">
+    <div className="flex flex-col pt-4 lg:pt-0 lg:flex-row lg:justify-between lg:items-center">
       {/* LOGO */}
       <div className="flex justify-between items-center align-middle px-4">
         <div className="flex gap-2 justify-center items-center">
-        <Link href="/">
-          <Image src={Logo} alt="logo" width="35" className="lg:pb-4" />
-        </Link>
-        <p>We&apos;re on a Mission</p></div>
+          <Link href="/">
+            <Image src={Logo} alt="logo" width="35" className="" />
+          </Link>
+          <p>We&apos;re on a Mission</p>
+        </div>
         <MobileNav open={open} setOpen={setOpen} />
         <div className=" flex lg:hidden justify-center items-center">
           <div
@@ -122,12 +123,8 @@ const Header = (props: Props) => {
       </div>
 
       {/* Menu */}
-      <div className="hidden lg:flex flex-col gap-6 pl-8 antialiased rounded-3xl py-8 lg:py-0 lg:pl-0 lg:flex-row justify-center mt-10 lg:mt-0 lg:gap-6">
-        <ul className="flex flex-col gap-3 lg:flex-row justify-center lg:items-center lg:gap-8 2xl:gap-10 ">
-          <div className="relative group lg:px-3 lg:py-2">
-            <button className="hover:text-[#aa4875]">LOGO</button>
-          </div>
-        </ul>
+      <div className="hidden lg:flex antialiased lg:justify-center ">
+        <button className="pr-4">LOGO</button>
       </div>
     </div>
   );
